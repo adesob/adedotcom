@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+/* .homeContainer */
+.homeContainer{
+    position: absolute;
+    border: 2px solid;
+    width: 35%;
+    height: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    display :flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* contentBx */
+.homeContainer .contentBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.8s;
+
+}
+
+.homeContainer:hover .contentBx{
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.homeContainer h1{
+     font-size:250%;
+}
+
+/* infoBx */
+.homeContainer .infoBx{
+    position: absolute;
+    top: 110%;
+    transform: translateY(-50%);
+    opacity:0;
+    visibility: hidden;
+    transition: 1s;
+
+}
+
+.homeContainer:hover .infoBx{
+    opacity:1;
+    visibility:visible;
+    transition-delay:0.2s;
+    top: 60.5%;
+    transform:translateY(-50%);
+}
+
+.homeContainer .infoBx p{
+    padding-bottom: 10px;
+}
+
+.socials{
+    text-align: center;
+    font-size: 17.5px;
+}
+
+.socials a{
+    padding: 0px 10px;
+    color: black
+}
+
+
+.hidden{
+    position: absolute;
+    top:150%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    opacity:0;
+    opacity:0;
+    visibility:visible;
+    transition: 0.8s;
+    font-size:75%;
+}
+
+#linkedin-av:hover + #linkedin, #resume-av:hover + #resume, 
+#github-av:hover + #github, #projects-av:hover + #projects{
+    opacity:1;
+    visibility:visible;
+    color:rgb(223, 172, 35);
+}
+
+
+@media (max-width:750px){
+    .homeContainer{
+        width:75%;
+    }
+    .homeContainer h1{
+        font-size: 225%;
+    }
+    .infoBx p{
+        font-size: 80%;
+    }
+    .socials{
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .homeContainer .infoBx .socials{
+    
+} */
+
+/* .homeContainer .infoBx .socials ul {
+    list-style: none;
+    text-align: center;
+}
+
+.homeContainer .infoBx .socials li {
+    display: inline;
+    padding: 0px 10px;
+    font-size: 17.5px;
+} */
+
+
+
+/* .socials ul li:hover:nth-child(1) ~ #linkedin{
+    display:block;
+    
+}
+.socials ul li:hover:nth-child(2) ~ #github{
+    display:block;
+    
+}
+.socials ul li:hover:nth-child(3) ~ #resume{
+    display:block;
+    
+}
+.socials ul li:hover:nth-child(4) ~ #projects{
+    display:block;
+    
+}
+
+.hidden{
+    position:absolute;
+    top:110%;
+    left:39.25%;
+    transform: translate(-50% 0%);
+    display:none;
+} */
