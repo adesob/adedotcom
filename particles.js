@@ -722,3 +722,11 @@ update = function() {
   requestAnimationFrame(update);
 };
 requestAnimationFrame(update);;
+
+const body = document.querySelector(".homeContainer")
+
+function changeColor(element){
+    element.style.backgroundColor = "#333"
+}
+
+changeColor(body)
