@@ -119,7 +119,7 @@
 
 
 
-#particles-js {
+#particles-js{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -299,7 +299,7 @@
     left:53.5%;
     transform:translate(-50%,-50%);
     border: 1px solid blue;
-    background-color: white;
+    background-color: black;
 }
 
 #imageBx2{
@@ -310,7 +310,7 @@
     left: 46.5%;
     transform:translate(-50%,-50%);
     border: 1px solid blue;
-    background-color: white;
+    background-color: black;
 }
 
 #imageBx3{
@@ -321,7 +321,7 @@
     left: 53.5%;
     transform:translate(-50%,-50%);
     border: 1px solid blue;
-    background-color: white;
+    background-color: black;
 }
 
 #imageBx4{
@@ -332,7 +332,7 @@
     left:46.5%;
     transform:translate(-50%,-50%);
     border: 1px solid blue;
-    background-color: white;
+    background-color: black;
 }
 
 
@@ -360,12 +360,14 @@
     width:100%;
     height:82.5%;
     top:50%;
-    /* left:-100%; */
-    left:42.5%;
+    left:-100%;
+    /* left:42.5%; */
     transform:translate(-50%,-50%);
     background-color: black;
-    /* visibility:none;
-    opacity:0; */
+    overflow:hidden;
+    padding:20px 15px;
+    visibility:none;
+    opacity:0;
     visibility:visible;
     opacity:1;
     transition:0.8s;
@@ -379,11 +381,24 @@
     top:50%;
     left:-100%;
     transform:translate(-50%,-50%);
+    justify-content: center;
+    align-items: center;
     background-color: black;
+    padding:20px 15px;
+    overflow:hidden;
     visibility:none;
     opacity:0;
     transition:0.8s;
 }
+
+
+#description1, #description2, #description3, #description4
+.pic:hover{
+    color:rgba(0,0,0,0.4);
+}
+
+
+
 
 
 #imageBx1:hover #description1, #imageBx2:hover #description2,
@@ -391,6 +406,11 @@
     visibility:visible;
     opacity:1;
     left:42.5%;
+}
+
+
+pic:hover {
+    opacity:0.4;
 }
 
 
@@ -408,9 +428,34 @@
     width:100%;
     height:100%;
     object-fit: cover;
+    transition: 0.8s;
 }
 
-.explan, .techUsed{
+.explan{
+    /* padding-top: 15px;
+    padding-left: 10px; */
+    font-size: 70%;
     color:rgb(240, 230, 215);
 }
 
+.techUsed{
+    /* padding-top: 5px;
+    padding-left: 10px; */
+    padding-top: 7.5px;
+    font-size: 70%;
+    color:rgb(240, 230, 215);
+}
+
+.gitLink{
+    color:rgb(240, 230, 215);
+    font-size:70%;
+    /* padding-top:20px; */
+}
+
+.gitLink:hover{
+    color:rgb(252, 221, 174);
+}
+
+#link{
+    padding-top:10px;
+}
