@@ -2,6 +2,10 @@ const home = document.querySelector(".homeContainer");
 const projLink = document.querySelector("#projects-av")
 const homeChildren = Array.from(home.children);
 
+// const descrp = document.querySelector(".description");
+// const descrp = document.querySelector(".description");
+
+
 var proj = ["LessTrvld", "Emerge", "ExpressCare", "Adedotcom"]
 var descContent =  ["Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus odio ex eligendi! Pariatur, debitis quaerat!",
 "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus odio ex eligendi! Pariatur, debitis quaerat!",
@@ -9,7 +13,7 @@ var descContent =  ["Lorem ipsum dolor sit, amet consectetur adipisicing elit. D
 "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus odio ex eligendi! Pariatur, debitis quaerat!"]
 var techUsedContent = ["JavaScript • React","Java • MicroPython • Android Studio • SolidWorks", "Java • Android Studio • Firebase  ", "HTML • CSS • JavaScript"]
 var pics = ["lessTrvld.jpg", "emerge.jpg","ExpressCare.jpg","adedotcom.jpg"]
-var links = ["","","",""]
+var links = ["https://github.com/adesob/LessTrvld","https://github.com/adesob/E-merge","https://github.com/adesob/ExpressCare","https://github.com/adesob/adedotcom"]
 
 // const imgBx = document.querySelector()
 // var lessTrvldTech = ["fab fa-js-square","fab fa-react"]
@@ -24,6 +28,10 @@ projLink.addEventListener('click', e =>{
     createProjects()
     
 });
+
+// descrp.addEventListener('mouseover', e=>{
+
+// });
 
 function removeElement(element){
     element.remove();  
@@ -53,6 +61,7 @@ function insertContent(num){
 
     // link.className = "link"
     link.href = links[num-1]
+    link.target = "_blank"
     link.className = "gitLink"
     link.innerHTML = '<i class="fa fa-external-link" id="link" aria-hidden="true"></i>'
 
@@ -86,21 +95,24 @@ function createProjects(){
         const itemsContent = Array.from(item.children)
 
         child = document.createElement("div")
+        child.className = "description"
         child.id = "description" + (i+1)
+
 
         const image = document.createElement("img");
         image.id = "pic" + (i+1)
         image.className = "pic"
         image.src = pics[i]
 
-        // const imageBx = document.querySelector("#imageBx" + num)
-        // imageBx.append(image)
 
         itemsContent[0].id = "imageBx" + (i+1)
+        itemsContent[0].className = "imageBx"
         itemsContent[0].append(image)
         itemsContent[0].append(child)
+        
 
         itemsContent[1].id = "projectName" + (i+1)
+        itemsContent[1].className = "projectName"
         itemsContent[1].innerText = proj[i]
 
         insertContent(i+1);
