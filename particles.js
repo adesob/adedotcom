@@ -595,6 +595,7 @@ i.open("GET", a), i.onreadystatechange = function(a) {
       } else console.log("Error pJS - XMLHttpRequest status: " + i.status), console.log("Error pJS - File config not found")
 }, i.send()
 };
+
 particlesJS("particles-js", {
 "particles": {
     "number": {
@@ -605,7 +606,7 @@ particlesJS("particles-js", {
         }
     },
     "color": {
-        "value": "#ffbd7f"
+        "value": "#2a313d"
     },
     "shape": {
         "type": "circle",
@@ -723,10 +724,3 @@ update = function() {
 };
 requestAnimationFrame(update);;
 
-const body = document.querySelector(".homeContainer")
-
-function changeColor(element){
-    element.style.backgroundColor = "#333"
-}
-
-changeColor(body)
